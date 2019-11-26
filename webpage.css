@@ -60,4 +60,15 @@
   background-color: #7979d8;
   font-size: 30px;
   margin-top: -4px;
-  padding-top: 30px; }
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.bottom {
+  background-color: rgba(7, 3, 3, 0.664);
+  color: white; }
+  .bottom h2, .bottom p {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width: 50%;
+    padding-left: 300px; }
