@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.navbar {
+  background-color: #7979d8; }
+  .navbar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    list-style: none;
+    height: 40px; }
+  .navbar li {
+    width: 20%; }
+  .navbar a {
+    padding: 12px;
+    color: white;
+    text-decoration: none; }
+    .navbar a:hover {
+      background-color: #9191df; }
+
+.image-container {
+  position: relative; }
+  .image-container span {
+    position: absolute;
+    top: 70px;
+    right: 500px;
+    color: white;
+    font-size: 30px; }
+
+.travels {
+  margin-top: -4px;
+  background-color: #7979d8;
+  color: silver;
+  font-size: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .travels .travel {
+    width: 33.33333%;
+    border: 1px solid silver;
+    font-size: 20px;
+    text-align: justify;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 40px; }
+    .travels .travel h2 {
+      color: lightgreen;
+      text-align: center;
+      margin: 5px auto; }
+
+.container {
+  text-align: center;
+  color: limegreen;
+  background-color: #7979d8;
+  font-size: 30px;
+  margin-top: -4px;
+  padding-top: 30px; }

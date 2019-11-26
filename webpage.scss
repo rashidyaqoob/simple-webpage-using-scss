@@ -1,0 +1,81 @@
+$deepBlue: rgb(121, 121, 216);
+$linkColor: white;
+@mixin travelStyle {
+    width:(100%/3);
+    border: 1px solid silver;
+    font-size: 20px;
+   text-align: justify;
+   padding: 10px;
+   margin: 10px;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color:$deepBlue;
+    ul{
+         display: flex;
+        align-items: center;
+        text-align: center;
+        font-size: 15px;
+        list-style: none;
+        height: 40px;
+    }
+    li{
+       
+        width: (100%/5);
+    }
+    a{
+        padding: 12px;
+        color: $linkColor;
+        text-decoration: none;
+        &:hover{
+            background-color: lighten($deepBlue,6);
+        }
+    }
+}
+
+.image-container{
+    position: relative;
+    span{
+        position: absolute;
+        top: 70px;
+        right: 500px;
+        color: white;
+        font-size: 30px;
+    }
+}
+.travels{ 
+    margin-top: -4px;
+    background-color: $deepBlue;
+    color: silver;
+    font-size: 40px;
+    display: flex;
+    .travel{
+        @include travelStyle()
+        margin-top:40px;
+       
+       h2{
+           color:lightgreen;
+           text-align: center;
+           margin: 5px auto;
+       }
+        
+    }
+}
+.container{
+    text-align: center;
+    color: limegreen;
+    background-color: $deepBlue;
+    font-size: 30px;
+    margin-top: -4px;
+    padding-top: 30px;
+    
+}
+
+   
+       
+   
