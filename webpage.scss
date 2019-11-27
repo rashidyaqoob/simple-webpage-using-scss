@@ -7,9 +7,38 @@ $linkColor: white;
    text-align: justify;
    padding: 10px;
    margin: 10px;
-    
-}
+  
+   a{
+       color: white;
+       text-decoration: none;
+       position: relative;
+       bottom: 0px;
+       left: 0px;
+       
+        &:hover{
+            color: complement($deepBlue);
+            text-decoration: complement($deepBlue) underline;
+        }     
+        
+    }
 
+   }//end travelStyle
+
+   @mixin mQ($arg...){
+       @if length($arg)==1{
+        @media screen and (max-width:nth($arg,1)){
+            @content;
+        }
+       }
+     
+   
+   @if length($arg)==2{
+    @media screen and (max-width:nth($arg,1)) and (min-width:nth($arg,2)) {
+        @content;
+    }
+
+}
+   }
 *{
     margin: 0;
     padding: 0;
@@ -23,10 +52,17 @@ $linkColor: white;
         font-size: 15px;
         list-style: none;
         height: 40px;
+        @include mQ(700px,400px){
+            flex-direction: column;
+            height: 200px;
+          
+        }
     }
     li{
        
         width: (100%/5);
+        flex-grow: 1;
+       
     }
     a{
         padding: 12px;
@@ -35,6 +71,7 @@ $linkColor: white;
         &:hover{
             background-color: lighten($deepBlue,6);
         }
+       
     }
 }
 
@@ -46,6 +83,9 @@ $linkColor: white;
         right: 500px;
         color: white;
         font-size: 30px;
+        @include mQ(700px){
+            right: 150px;
+        }
     }
 }
 .travels{ 
@@ -54,9 +94,15 @@ $linkColor: white;
     color: silver;
     font-size: 40px;
     display: flex;
+    position: relative;
     .travel{
         @include travelStyle()
-        margin-top:40px;
+       
+        @include mQ(700px,400px){
+           img{
+               height: 150px;
+           } 
+        }  
        
        h2{
            color:lightgreen;
@@ -86,6 +132,9 @@ $linkColor: white;
         padding-bottom: 30px;
         width: 50%;
         padding-left: 300px;
+        @include mQ(700px){
+            margin-left: -120px;
+        }
     }
    
 }
